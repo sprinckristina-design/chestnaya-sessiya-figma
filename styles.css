@@ -35,12 +35,15 @@ h1,h2{font:900 italic 68px/.88 Montserrat,sans-serif;letter-spacing:-.04em;margi
 .cards article{height:154px;border-radius:18px;background:var(--purple);color:var(--cream);display:flex;flex-direction:column;align-items:center;justify-content:center}
 .cards b{font-size:31px}
 .cards small{margin-top:10px;font-size:14px}
-.actions{background:var(--cream);display:grid;grid-template-columns:1fr 1fr;column-gap:100px;align-items:center}
-.actions h2{font-size:78px}
-.actions ol{margin:70px 0 0;padding:0;list-style:none;border-top:1px solid}
-.actions li{display:grid;grid-template-columns:70px 1fr;gap:16px;padding:25px 0;border-bottom:1px solid}
-.actions li>b{color:var(--purple)}
-.actions strong{display:block;font-size:24px;margin-bottom:9px}
+.support{height:1080px;min-height:1080px;background:var(--cream)}
+.support h2{position:relative;z-index:2;font-size:62px;max-width:700px}
+.support-circle{position:absolute;width:450px;height:450px;border-radius:50%;background:#f8eaa0;left:25%;top:135px}
+.support-dot{position:absolute;width:108px;height:108px;border-radius:50%;background:#f8eaa0;left:62%;top:68px}
+.support article{position:absolute;right:max(50px,calc((100% - 1280px)/2 + 70px));top:155px;width:325px;height:375px;border-radius:24px;background:var(--purple);color:var(--cream);padding:33px 28px;display:flex;flex-direction:column}
+.support article p{margin:0;font-size:18px;line-height:1.05;letter-spacing:.05em}
+.support h3{margin:67px 0 0;font:800 29px/.88 Montserrat,sans-serif}
+.support article span{margin-top:auto;font-size:15px;line-height:1.25}
+.support>.pill{position:absolute;left:max(50px,calc((100% - 1280px)/2));top:570px;margin:0}
 .myths{background:var(--blue);min-height:880px}
 .myths h2{font-size:88px}
 .facts{margin:65px 0 0;display:grid;grid-template-columns:1fr 1fr;border-top:1px solid}
@@ -54,8 +57,9 @@ h1,h2{font:900 italic 68px/.88 Montserrat,sans-serif;letter-spacing:-.04em;margi
 .faq summary{display:flex;justify-content:space-between;list-style:none;font-size:24px;font-weight:700;cursor:pointer}
 .faq summary b{font-size:32px;font-weight:400}
 .faq p{line-height:1.55}
-footer{padding:65px max(50px,calc((100% - 1280px)/2));background:var(--ink);color:var(--cream);display:flex;justify-content:space-between;font:800 24px Montserrat}
-footer a{font-size:15px;color:var(--yellow)}
+footer{min-height:840px;padding:86px max(50px,calc((100% - 1280px)/2));background:var(--cream);color:var(--ink);position:relative}
+footer p{margin:0;font:900 italic clamp(76px,8.7vw,132px)/.83 Montserrat,sans-serif;letter-spacing:-.07em;max-width:1120px}
+footer a{position:absolute;right:max(50px,calc((100% - 1280px)/2));bottom:62px;font-size:15px;color:var(--purple);font-weight:800}
 @media(max-width:800px){section{min-height:auto;padding:50px 24px}
 .hero{height:auto;min-height:875px;padding-top:28px}
 header{font-size:10px;padding-bottom:18px}
@@ -67,20 +71,27 @@ header nav{gap:10px}
 .receipt em{font-size:42px}
 .receipt strong{font-size:22px}
 .circle{position:static;width:100%;height:180px;margin:30px 0;font-size:28px}
-.situations h2,.actions h2,.myths h2,.faq h2{font-size:49px}
+.situations h2,.myths h2,.faq h2{font-size:49px}
 .rows{position:static;margin-top:35px}
 .rows>div{height:auto;display:block;padding:20px 0}
 .rows span,.rows strong{display:block;margin:10px 0}
 .rows i{margin-right:15px}
 .cards{position:static;margin-top:55px;display:grid;gap:12px}
 .cards article{height:120px}
-.actions{display:block}
-.actions ol{margin-top:45px}
+.support{height:auto;min-height:760px}
+.support h2{font-size:44px}
+.support-circle{width:310px;height:310px;left:24px;top:175px}
+.support-dot{width:60px;height:60px;left:auto;right:42px;top:95px}
+.support article{position:absolute;right:24px;left:24px;top:490px;width:auto;height:300px;padding:25px}
+.support h3{margin-top:38px;font-size:25px}
+.support>.pill{left:24px;top:835px}
 .myths .facts{grid-template-columns:1fr}
 .facts p:nth-child(even){border-left:0}
 .faq details{margin-left:0}
 .faq summary{font-size:19px}
-footer{padding:35px 24px;font-size:16px}
+footer{min-height:590px;padding:54px 24px}
+footer p{font-size:61px}
+footer a{right:24px;bottom:34px}
 .pill{margin-top:25px}
 }
 @media(min-width:801px){
